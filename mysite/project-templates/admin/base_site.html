@@ -1,0 +1,23 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block extrastyle %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+{% endblock %}
+
+{% block title %}
+    {% if subtitle %}{{ subtitle }} | {% endif %}
+    {{ title }} |
+
+    {{ site_title|default:_('Admin Panel Pro') }}
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">
+<!--    {{ site_header|default:_('Admin Panel Pro') }}-->
+Nothing Ez
+</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
